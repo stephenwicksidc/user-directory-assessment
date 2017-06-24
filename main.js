@@ -1,20 +1,22 @@
-const express = require('express');
+
+const express = require("express");
+const mustacheExpress = require("mustache-express");
+const path = require("path");
 const app = express();
-const mustache = require('mustache');
-const mExpress = require('mustache-express');
-const data = require('./data.js');
-app.engine("mustache",mExpress());
-app.set ("view engine", "mustache");
-app.set("views", "./views");
+const data = require("./data.js");
 
-app.use(express.static('public'));
+app.engine('mustache', mustacheExpress());
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'mustache')
 
-app.get('/index', function(req, res){
-        res.render("user_directory", data);
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get("/", function(req, res){
+    res.render("index", data);
 });
-
-app.listen(3000, function(){
-    console.log("Hey this works");
+app.get('/profile/:id', function (req, res) {
+    res.render('profile', data);
 });
-
-
+app.listen(3000,function(er, res){
+    console.log("Server started on Port 3000")
+})

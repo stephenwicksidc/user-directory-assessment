@@ -1,0 +1,40 @@
+
+a, p, h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
+.directoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    width: 85%;
+}
+.usercard {
+   border: solid;
+   border-width: 1px;
+   border-color: lightgrey;
+   width: 150px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+.nameOfPerson {
+    font-size: 14pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 5px 5px 5px;
+}
+.jobInfo {
+    font-size: 10pt;
+}
+a, a:visited {
+    color: blue;
+    text-decoration: none;
+    
+}
