@@ -11,10 +11,13 @@
             {{#users}}
                 <div class="usercard">
                     <img src="{{avatar}}"><br>
-                    <a href="/profile/{{id}}"><p class="nameOfPerson">{{name}}</p></a>
+                    <a href="/profile/{{{id}}}"><p class="nameOfPerson">{{name}}</p></a>
                     <p class="jobInfo">{{job}}, {{company}}</p>
                 </div>
             {{/users}}
         </div>
     </body>
 <html>
+
+/*correct version
+<a href="/profile/{{id}}"><p class="nameOfPerson">{{name}}</p></a>*/
